@@ -49,9 +49,6 @@ ol {
   max-height: 534px;
 }
 
-.search-form {
-}
-
 .content__details {
   inline-size: 430px;
   block-size: inherit;
@@ -67,7 +64,7 @@ ol {
   flex-direction: column;
   align-self: flex-start;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
   inline-size: inherit;
   margin-top: 26px;
 }
