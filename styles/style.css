@@ -9,11 +9,13 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -30,9 +32,313 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 30px;
+  width: 1140px;
+  max-height: 534px;
+}
+
+.search-form {
+}
+
+.content__details {
+  inline-size: 430px;
+  block-size: inherit;
+  writing-mode: horizontal-tb;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  position: relative;
+  overflow-y: scroll;
+  inline-size: inherit;
+  margin-top: 26px;
+}
+
+.result {
+  padding-top: 74px;
+  height: 532px;
+  min-width: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result__video-container {
+  block-size: 386px;
+  inline-size: 100%;
+  position: relative;
+}
+
+.result__video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+video {
+  width: 100%;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 28px;
+}
+.content__video-card {
+  max-height: 298px;
+  max-width: 399px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.search-form__textfield::placeholder {
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: start;
+  background-color: transparent;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+  block-size: 103px;
+  object-fit: cover;
+  object-position: center;
+  align-items: center;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  block-size: 54px;
+}
+
+.search-form__fieldset-title {
+  margin-bottom: 5px;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.title {
+  font-family: "Oswald", "Arial", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.content__accent {
+  color: rgba(84, 80, 80, 1);
+}
+
+.content__card-link {
+  text-decoration: none;
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.content__card-link:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.content__video-card-title {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Oswald", "Arial", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 5px;
+  padding: 2px 2px 5px 0;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+  color: #ffffff;
+  padding: 2px 2px 0 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__label {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.search-form__checkbox:hover,
+.search-form__textfield:hover,
+.search-form__label:hover,
+.button:hover {
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  background-color: #fff;
+  inline-size: 15px;
+  block-size: 15px;
+  display: block;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.search-form:first-child {
+  margin-right: 10px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 15px;
+}
+
+.search-form__label-text {
+  appearance: none;
+}
+
+button {
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  text-transform: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 6px 0 6px 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover,
+.search-form__label-text:hover,
+.content__video-card-description-container:hover,
+.content__card-link:hover {
+  text-decoration: underline 1px #fff;
+}
+
+.button:active,
+.content__card-link:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.search-form__submit-button {
+  inline-size: 194px;
+}
+
+.more-button {
+  inline-size: 399px;
+  margin-bottom: 2px;
+}
+
+.search-form__textfield {
+  background-color: transparent;
+  width: 225px;
+  height: 27px;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-left: transparent;
+  border-right: transparent;
+  padding: 0;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.7);
 }
