@@ -45,8 +45,10 @@ ol {
   flex-direction: row;
   align-self: center;
   gap: 30px;
+  margin: 0 30px;
   width: 1140px;
   block-size: auto;
+  inline-size: 100%;
 }
 
 .content__details {
@@ -98,6 +100,7 @@ video {
 .content__list-item:not(:last-child) {
   margin-bottom: 28px;
 }
+
 .content__video-card {
   max-height: 298px;
   max-width: 399px;
@@ -144,7 +147,7 @@ video {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  block-size: 54px;
+  block-size: 100%;
 }
 
 .search-form__fieldset-title {
@@ -198,7 +201,7 @@ video {
 
 .content__video-card-title {
   color: rgba(255, 255, 255, 1);
-  font-family: "Oswald", "Arial", "Arial", sans-serif;
+  font-family: "Oswald","Arial", sans-serif;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
@@ -233,10 +236,10 @@ video {
 }
 
 .search-form__label {
-  width: -moz-fit-content;
-  width: fit-content;
+  display: flex;
   align-items: center;
-}
+  gap: 5px;
+ }
 
 .search-form__checkbox:hover,
 .search-form__textfield:hover,
